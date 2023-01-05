@@ -1,12 +1,14 @@
-from django.conf import settings
+from django.contrib.auth import get_user_model
 from graphene_django import DjangoObjectType
 
 from .models import Post, Profile, Tag
 
+User = get_user_model()
+
 
 class UserType(DjangoObjectType):
     class Meta:
-        model = settings.AUTH_USER_MODEL
+        model = User
 
 class AuthorType(DjangoObjectType):
     class Meta:
