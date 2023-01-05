@@ -1,1 +1,1 @@
-# django-graphql-vue
+# django-graphql
